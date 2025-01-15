@@ -17,57 +17,116 @@ namespace MauiAppAlexandria
         private async void OnSearchBookClicked(object sender, EventArgs e)
         {
             string bookName = BookNameEntry.Text;
+            string bookAuthor = BookAuthorEntry.Text;
 
-            // Exibe o nome do livro pesquisado
-            DisplayAlert("Livro Pesquisado", $"Você pesquisou: {bookName}", "OK");
-
-            // Construa a URL da requisição, substituindo espaços por "+"
-            string url = $"https://www.googleapis.com/books/v1/volumes?q={Uri.EscapeDataString(bookName)}";
+            string url = returnUrl(bookName, bookAuthor);
+            if (url == null)
+            {
+                return;
+            }
 
             try
             {
-                // Faz a requisição para a API do Google Books
+                
                 HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode(); // Garante que a resposta foi bem-sucedida
+                response.EnsureSuccessStatusCode(); 
 
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // Parse a resposta JSON usando System.Text.Json
+                
                 using (JsonDocument doc = JsonDocument.Parse(responseBody))
                 {
-                    // Acessa os itens da resposta JSON
-                    var items = doc.RootElement.GetProperty("items");
 
-                    if (items.GetArrayLength() > 0)
+                    if (doc.RootElement.TryGetProperty("items", out var items) && items.ValueKind == JsonValueKind.Array)
                     {
-                        var firstBook = items[0].GetProperty("volumeInfo");
+                        if (items.GetArrayLength() > 0)
+                        {
+                            var firstBook = returnJsonElementIfExists("volumeInfo", items[0]);
+                            if (firstBook.ValueKind == JsonValueKind.Undefined)
+                            {
+                                await DisplayAlert("Resultado da Pesquisa", "Nenhum dado encontrado para esse livro/autor", "OK");
+                                return;
+                            }
 
-                        // Extrai as informações do primeiro livro
-                        string title = firstBook.GetProperty("title").GetString();
-                        string authors = string.Join(", ", firstBook.GetProperty("authors").EnumerateArray());
-                        string description = firstBook.GetProperty("description").GetString();
-                        string publisher = firstBook.GetProperty("publisher").GetString();
-                        string thumbnail = firstBook.GetProperty("imageLinks").GetProperty("thumbnail").GetString();
+                            string title = returnFieldIfExists("title", firstBook) ?? "Título não disponível";
+                            string authors = string.Join(", ", returnFieldArrayIfExists("authors", firstBook)) ?? "Autores não disponíveis";
+                            string description = returnFieldIfExists("description", firstBook) ?? "Descrição não disponível";
+                            string publisher = returnFieldIfExists("publisher", firstBook) ?? "Editora não disponível";
+                            string thumbnail = string.Empty;
 
-                        // Exibe as informações do livro
-                        DisplayAlert("Resultado da Pesquisa",
-                            $"Título: {title}\n" +
-                            $"Autores: {authors}\n" +
-                            $"Descrição: {description}\n" +
-                            $"Editora: {publisher}\n" +
-                            $"Thumbnail: {thumbnail}",
-                            "OK");
+                            var imageLinks = returnJsonElementIfExists("imageLinks", firstBook);
+                            if (imageLinks.ValueKind != JsonValueKind.Undefined)
+                            {
+                                thumbnail = returnFieldIfExists("thumbnail", imageLinks) ?? "Imagem não disponível";
+                            }
+
+
+                            await Navigation.PushAsync(new BookDetailsPage(title, authors, description, publisher, thumbnail));
+
+                        }
+                        else
+                        {
+                           await  DisplayAlert("Resultado da Pesquisa", "Nenhum livro/autor encontrado.", "OK");
+                        }
                     }
-                    else
-                    {
-                        DisplayAlert("Resultado da Pesquisa", "Nenhum livro encontrado.", "OK");
+                    else {
+                        await DisplayAlert("Resultado da Pesquisa", "Nenhum livro/autor encontrado.", "OK");
                     }
                 }
             }
             catch (Exception ex)
             {
-                DisplayAlert("Erro", $"Erro ao pesquisar: {ex.Message}", "OK");
+                await DisplayAlert("Erro", $"Erro ao pesquisar: {ex.Message}", "OK");
             }
+        }
+
+        private string? returnUrl(string bookName, string bookAuthor)
+        {
+            if (string.IsNullOrWhiteSpace(bookName) && string.IsNullOrWhiteSpace(bookAuthor))
+            {
+                DisplayAlert("Erro", "Por favor, digite o nome de um livro ou autor.", "OK");
+                return null;
+            }
+
+            string url = "https://www.googleapis.com/books/v1/volumes?q=";
+
+            if (!string.IsNullOrWhiteSpace(bookName))
+            {
+                url += Uri.EscapeDataString(bookName);
+            }
+
+            if (!string.IsNullOrWhiteSpace(bookAuthor))
+            {
+                url += "+inauthor:" + Uri.EscapeDataString(bookAuthor);
+            }
+            return url;
+        }
+
+        private JsonElement returnJsonElementIfExists(string fieldName, JsonElement json)
+        {
+            if (json.TryGetProperty(fieldName, out var jsonElement))
+            {
+                return jsonElement;
+            }
+            return default; 
+        }
+
+        private string? returnFieldIfExists(string fieldName, JsonElement json)
+        {
+            if (json.TryGetProperty(fieldName, out var jsonUrl))
+            {
+                return jsonUrl.GetString();
+            }
+            return null; 
+        }
+
+        private IEnumerable<string> returnFieldArrayIfExists(string fieldName, JsonElement json)
+        {
+            if (json.TryGetProperty(fieldName, out var jsonUrl) && jsonUrl.ValueKind == JsonValueKind.Array)
+            {
+                return jsonUrl.EnumerateArray().Select(x => x.GetString()).Where(x => !string.IsNullOrEmpty(x));
+            }
+            return Enumerable.Empty<string>(); 
         }
     }
 }

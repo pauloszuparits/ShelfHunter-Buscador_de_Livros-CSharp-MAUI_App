@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\bookdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\bookdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -15,16 +15,8 @@
       "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|c:\\users\\paulo\\downloads\\documentos sem backup\\projetos programa\u00E7\u00E3o\\c#\\mauiappalexandria\\mauiappalexandria\\bookdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6032C993-ACEA-4834-9DC7-3B02D748FEC1}|MauiAppAlexandria\\MauiAppAlexandria.csproj|solutionrelative:mauiappalexandria\\bookdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -44,48 +36,35 @@
               "RelativeDocumentMoniker": "MauiAppAlexandria\\AppShell.xaml",
               "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\AppShell.xaml",
               "RelativeToolTip": "MauiAppAlexandria\\AppShell.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA8AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T11:41:36.254Z",
+              "WhenOpened": "2025-01-15T18:34:01.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\App.xaml",
-              "RelativeDocumentMoniker": "MauiAppAlexandria\\App.xaml",
-              "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\App.xaml",
-              "RelativeToolTip": "MauiAppAlexandria\\App.xaml",
+              "Title": "BookDetailsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\BookDetailsPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiAppAlexandria\\BookDetailsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\BookDetailsPage.xaml.cs",
+              "RelativeToolTip": "MauiAppAlexandria\\BookDetailsPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T11:41:27.49Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T16:35:55.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\Resources\\Styles\\Styles.xaml",
-              "RelativeDocumentMoniker": "MauiAppAlexandria\\Resources\\Styles\\Styles.xaml",
-              "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\Resources\\Styles\\Styles.xaml",
-              "RelativeToolTip": "MauiAppAlexandria\\Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BookDetailsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\BookDetailsPage.xaml",
+              "RelativeDocumentMoniker": "MauiAppAlexandria\\BookDetailsPage.xaml",
+              "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\BookDetailsPage.xaml",
+              "RelativeToolTip": "MauiAppAlexandria\\BookDetailsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T11:41:19.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Colors.xaml",
-              "DocumentMoniker": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\Resources\\Styles\\Colors.xaml",
-              "RelativeDocumentMoniker": "MauiAppAlexandria\\Resources\\Styles\\Colors.xaml",
-              "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\Resources\\Styles\\Colors.xaml",
-              "RelativeToolTip": "MauiAppAlexandria\\Resources\\Styles\\Colors.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T11:41:03.122Z",
+              "WhenOpened": "2025-01-15T16:35:53.804Z",
               "EditorCaption": ""
             },
             {
@@ -96,22 +75,9 @@
               "RelativeDocumentMoniker": "MauiAppAlexandria\\MainPage.xaml",
               "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\MainPage.xaml",
               "RelativeToolTip": "MauiAppAlexandria\\MainPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T11:38:25.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "MauiAppAlexandria\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\paulo\\Downloads\\Documentos sem backup\\Projetos programa\u00E7\u00E3o\\C#\\MauiAppAlexandria\\MauiAppAlexandria\\MainPage.xaml.cs",
-              "RelativeToolTip": "MauiAppAlexandria\\MainPage.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCIAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T11:38:23.272Z",
+              "WhenOpened": "2025-01-15T16:44:07.182Z",
               "EditorCaption": ""
             }
           ]

@@ -125,6 +125,7 @@ C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiApp
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppAlexandria.AssemblyInfoInputs.cache
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppAlexandria.AssemblyInfo.cs
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppAlexandria.csproj.CoreCompileInputs.cache
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppAlexandria.sourcelink.json
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\XamlC.stamp
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppAlexandria.dll
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppAlexandria.pdb

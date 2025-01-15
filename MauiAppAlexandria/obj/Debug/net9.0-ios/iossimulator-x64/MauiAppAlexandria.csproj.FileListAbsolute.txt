@@ -301,6 +301,7 @@ C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiApp
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\MauiAppAlexandria.AssemblyInfoInputs.cache
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\MauiAppAlexandria.AssemblyInfo.cs
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\MauiAppAlexandria.csproj.CoreCompileInputs.cache
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\MauiAppAlexandria.sourcelink.json
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\XamlC.stamp
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\MauiAppA.BB1A69A3.Up2Date
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-ios\iossimulator-x64\MauiAppAlexandria.dll

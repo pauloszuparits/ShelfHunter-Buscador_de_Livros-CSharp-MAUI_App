@@ -19,7 +19,12 @@
                 Placeholder="Digite o nome do livro"
                 FontSize="18" />
 
-            
+            <Entry
+                x:Name="BookAuthorEntry"
+                Placeholder="Digite o nome do autor"
+                FontSize="18" />
+
+
             <Button
                 Text="Pesquisar Livro"
                 FontSize="18"
