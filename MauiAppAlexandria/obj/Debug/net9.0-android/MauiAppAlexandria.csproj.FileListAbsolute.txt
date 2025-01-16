@@ -28,6 +28,7 @@ C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiApp
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Semibold.ttf
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\r\drawable\books.png
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\r\drawable\noimg.jpg
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
@@ -1313,3 +1314,13 @@ C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiApp
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\assets\FluentUI.cs
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\assets\OpenSans-Regular.ttf
 C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\assets\OpenSans-Semibold.ttf
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\MauiAppA.BB1A69A3.Up2Date
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\paulo\Downloads\Documentos sem backup\Projetos programação\C#\MauiAppAlexandria\MauiAppAlexandria\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.TapContract.dll

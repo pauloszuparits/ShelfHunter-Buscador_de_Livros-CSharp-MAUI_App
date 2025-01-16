@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MauiAppAlexandria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9914e9347b9d50a7953dfea511c0b918c97d8916")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7e8976a36db7f504caffb044aba08513a386de91")]
 [assembly: System.Reflection.AssemblyProductAttribute("MauiAppAlexandria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MauiAppAlexandria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -24,12 +24,27 @@
                 Placeholder="Digite o nome do autor"
                 FontSize="18" />
 
+            <Entry
+                x:Name="BookPublisherEntry"
+                Placeholder="Digite o editora"
+                FontSize="18" />
 
-            <Button
-                Text="Pesquisar Livro"
-                FontSize="18"
-                Clicked="OnSearchBookClicked"
-                HorizontalOptions="Center" />
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="SearchButton"
+                        Text="Pesquisar Livro"
+                        FontSize="18"
+                        Clicked="OnSearchBookClicked"
+                        BackgroundColor="#f16a3d"
+                        HorizontalOptions="Center" />
+
+                
+                <ActivityIndicator x:Name="LoadingIndicator"
+                                   IsRunning="False"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Color="White" />
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

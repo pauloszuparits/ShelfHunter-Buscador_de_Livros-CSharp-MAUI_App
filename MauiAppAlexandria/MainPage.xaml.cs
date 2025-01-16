@@ -16,75 +16,90 @@ namespace MauiAppAlexandria
 
         private async void OnSearchBookClicked(object sender, EventArgs e)
         {
+            
+            SearchButton.IsVisible = false;
+            LoadingIndicator.IsRunning = true;
+            LoadingIndicator.IsVisible = true;
+
             string bookName = BookNameEntry.Text;
             string bookAuthor = BookAuthorEntry.Text;
+            string publisherName = BookPublisherEntry.Text;
 
-            string url = returnUrl(bookName, bookAuthor);
+            string url = returnUrl(bookName, bookAuthor, publisherName);
+
             if (url == null)
             {
+                await DisplayAlert("Erro", "Por favor, insira pelo menos um critério de pesquisa.", "OK");
+                
+                SearchButton.IsVisible = true;
+                LoadingIndicator.IsRunning = false;
+                LoadingIndicator.IsVisible = false;
                 return;
             }
 
             try
             {
-                
                 HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode(); 
+                response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                
                 using (JsonDocument doc = JsonDocument.Parse(responseBody))
                 {
-
                     if (doc.RootElement.TryGetProperty("items", out var items) && items.ValueKind == JsonValueKind.Array)
                     {
-                        if (items.GetArrayLength() > 0)
+                        List<Book> books = new List<Book>();
+
+                        foreach (var item in items.EnumerateArray())
                         {
-                            var firstBook = returnJsonElementIfExists("volumeInfo", items[0]);
-                            if (firstBook.ValueKind == JsonValueKind.Undefined)
+                            var volumeInfo = returnJsonElementIfExists("volumeInfo", item);
+
+                            if (volumeInfo.ValueKind == JsonValueKind.Undefined)
                             {
-                                await DisplayAlert("Resultado da Pesquisa", "Nenhum dado encontrado para esse livro/autor", "OK");
-                                return;
+                                continue;
                             }
 
-                            string title = returnFieldIfExists("title", firstBook) ?? "Título não disponível";
-                            string authors = string.Join(", ", returnFieldArrayIfExists("authors", firstBook)) ?? "Autores não disponíveis";
-                            string description = returnFieldIfExists("description", firstBook) ?? "Descrição não disponível";
-                            string publisher = returnFieldIfExists("publisher", firstBook) ?? "Editora não disponível";
-                            string thumbnail = string.Empty;
-
-                            var imageLinks = returnJsonElementIfExists("imageLinks", firstBook);
-                            if (imageLinks.ValueKind != JsonValueKind.Undefined)
+                            books.Add(new Book
                             {
-                                thumbnail = returnFieldIfExists("thumbnail", imageLinks) ?? "Imagem não disponível";
-                            }
-
-
-                            await Navigation.PushAsync(new BookDetailsPage(title, authors, description, publisher, thumbnail));
-
+                                Title = returnFieldIfExists("title", volumeInfo) ?? "Título não disponível",
+                                Authors = string.Join(", ", returnFieldArrayIfExists("authors", volumeInfo)),
+                                Description = returnFieldIfExists("description", volumeInfo) ?? "Descrição não disponível",
+                                Publisher = returnFieldIfExists("publisher", volumeInfo) ?? "Editora não disponível",
+                                Thumbnail = returnFieldIfExists("thumbnail", returnJsonElementIfExists("imageLinks", volumeInfo)) ?? string.Empty,
+                                Pages = returnFieldIntIfExists("pageCount", volumeInfo),
+                                PublishedYear = returnFieldIfExists("publishedDate", volumeInfo) != null
+                                                ? returnFieldIfExists("publishedDate", volumeInfo).Split('-')[0]
+                                                : "Ano de publicação não disponível"
+                            });
                         }
-                        else
-                        {
-                           await  DisplayAlert("Resultado da Pesquisa", "Nenhum livro/autor encontrado.", "OK");
-                        }
+
+                        await Navigation.PushAsync(new BooksPage(books));
                     }
-                    else {
+                    else
+                    {
                         await DisplayAlert("Resultado da Pesquisa", "Nenhum livro/autor encontrado.", "OK");
                     }
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Erro", $"Erro ao pesquisar: {ex.Message}", "OK");
+                await DisplayAlert("Erro", $"Erro ao pesquisar: {ex.StackTrace}", "OK");
+            }
+            finally
+            {
+                SearchButton.IsVisible = true;
+                LoadingIndicator.IsRunning = false;
+                LoadingIndicator.IsVisible = false;
             }
         }
 
-        private string? returnUrl(string bookName, string bookAuthor)
+
+
+
+        private string? returnUrl(string bookName, string bookAuthor, string publisherName)
         {
-            if (string.IsNullOrWhiteSpace(bookName) && string.IsNullOrWhiteSpace(bookAuthor))
+            if (string.IsNullOrWhiteSpace(bookName) && string.IsNullOrWhiteSpace(bookAuthor) && string.IsNullOrWhiteSpace(publisherName))
             {
-                DisplayAlert("Erro", "Por favor, digite o nome de um livro ou autor.", "OK");
                 return null;
             }
 
@@ -99,6 +114,11 @@ namespace MauiAppAlexandria
             {
                 url += "+inauthor:" + Uri.EscapeDataString(bookAuthor);
             }
+
+            if (!string.IsNullOrWhiteSpace(publisherName))
+            {
+                url += "+inpublisher:" + Uri.EscapeDataString(publisherName);
+            }
             return url;
         }
 
@@ -111,13 +131,37 @@ namespace MauiAppAlexandria
             return default; 
         }
 
-        private string? returnFieldIfExists(string fieldName, JsonElement json)
+        private string returnFieldIfExists(string fieldName, JsonElement json)
         {
-            if (json.TryGetProperty(fieldName, out var jsonUrl))
+            try
             {
-                return jsonUrl.GetString();
+                if (json.TryGetProperty(fieldName, out var jsonUrl))
+                {
+                    return jsonUrl.GetString();
+                }
+
+                return null;
             }
-            return null; 
+            catch (Exception ex) {
+                return null;
+            }
+        }
+
+        private int returnFieldIntIfExists(string fieldName, JsonElement json)
+        {
+            try
+            {
+                if (json.TryGetProperty(fieldName, out var jsonUrl))
+                {
+                    return jsonUrl.GetInt32();
+                }
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
         }
 
         private IEnumerable<string> returnFieldArrayIfExists(string fieldName, JsonElement json)
