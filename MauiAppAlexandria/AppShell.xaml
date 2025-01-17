@@ -13,7 +13,7 @@
         <Shell.TitleView>
             <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                 <Label
-                    Text="Busca Livros Alexandria"
+                    Text="ShelfHunter - Encontre seu livro favorito"
                     FontSize="24"
                     TextColor="White"
                     HorizontalTextAlignment="Center" />

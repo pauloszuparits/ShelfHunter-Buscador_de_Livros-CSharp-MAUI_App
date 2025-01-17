@@ -1,0 +1,103 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppAlexandria.BooksPage"
+             >
+    <Shell.TitleView>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Label
+            Text="Livros Encontrados"
+            FontSize="24"
+            TextColor="White"
+            HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </Shell.TitleView>
+    <Grid RowDefinitions="Auto, *" ColumnDefinitions="*, *, *">
+        <Button Text="◀" 
+                WidthRequest="50" 
+                HeightRequest="50" 
+                HorizontalOptions="End"  
+                FontSize="30" 
+                TextColor="White" 
+                BackgroundColor="Transparent"
+                Clicked="OnPreviousBookClicked" 
+                Grid.Row="0" 
+                Grid.Column="0" />
+        
+        <Image x:Name="BookThumbnail" HeightRequest="200" HorizontalOptions="Center" Margin="0,20,0,30" Grid.Row="0" Grid.Column="1" />
+
+        <Button Text="▶" 
+                WidthRequest="50" 
+                HeightRequest="50" 
+                HorizontalOptions="Start" 
+                FontSize="30" 
+                TextColor="White" 
+                BackgroundColor="Transparent" 
+                Clicked="OnNextBookClicked" 
+                Grid.Row="0" 
+                Grid.Column="2" />
+
+        <ScrollView Grid.Row="1" Grid.ColumnSpan="3">
+            <StackLayout Padding="10">
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="0,0,0,50">
+                    
+                    <Label x:Name="TitleLabel" 
+                   FontSize="24" 
+                   VerticalOptions="Center"
+                   FontAttributes="Bold" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,10">
+                    <Label Text="Autores: " 
+                   FontSize="16" 
+                   VerticalOptions="Center"
+                   FontAttributes="Bold" Margin="0,0,10,0"/>
+                    <Label x:Name="AuthorsLabel" 
+                   FontSize="16" 
+                   VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,10">
+                    <Label Text="Editora: " 
+                   FontSize="16" 
+                   VerticalOptions="Center"
+                   FontAttributes="Bold" Margin="0,0,10,0"/>
+                    <Label x:Name="PublisherLabel" 
+                   FontSize="16" 
+                   VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,10">
+                    <Label Text="Ano de publicação: " 
+                            FontSize="16" 
+                            VerticalOptions="Center"
+                            FontAttributes="Bold" Margin="0,0,10,0"/>
+                    <Label x:Name="PublishedYear" 
+                            FontSize="16" 
+                            VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,10">
+                    <Label Text="Número de páginas: " 
+                   FontSize="16" 
+                   VerticalOptions="Center"
+                   FontAttributes="Bold" Margin="0,0,10,0"/>
+                    <Label x:Name="PagesLabel" 
+                   FontSize="16" 
+                   VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="20,0,20,10">
+                    <Label Text="Descrição: " 
+                   FontSize="16" 
+                   VerticalOptions="Start"
+                   FontAttributes="Bold"/>
+                    <Label x:Name="DescriptionLabel" 
+                   FontSize="16" 
+                   VerticalOptions="Start" 
+                   LineBreakMode="WordWrap" 
+                   HorizontalTextAlignment="Justify"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
