@@ -2,6 +2,13 @@
 
 **ShelfHunter** é um aplicativo desenvolvido com .NET MAUI que permite pesquisar livros utilizando a API do Google Books. Ele apresenta informações como título, autores, editora, descrição e ano de publicação dos livros encontrados, além de permitir a navegação entre os resultados.
 
+## Como baixar o aplicativo?
+
+Para baixar o **ShelfHunter** o usuário deve clicar clonar esse repositorio e ir até o caminho abaixo
+\MauiAppAlexandria\bin\Release\net9.0-windows10.0.19041.0\win10-x64
+
+Nessa pasta, terá um arquivo MauiAppAlexandria.exe, que é o executavel deste APP.
+
 ## Recursos
 
 - Pesquisa de livros por título, autor ou editora.
